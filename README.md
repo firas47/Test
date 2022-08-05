@@ -1,16 +1,30 @@
-# petstore
+First thing i do is researching the project wich means looking into semlair apps and designs to get a general idea after that i look into the flutter widgets and libraries that i may use.
 
-A new Flutter project.
+Next thing i design the layout on a paper (the design is subject to change during the implementation).
 
-## Getting Started
+As for the implementation i divide the project in tasks and work on them separately.
 
-This project is a starting point for a Flutter application.
+Before i start i create constants and theme files to use them on all the project.
 
-A few resources to get you started if this is your first Flutter project:
+Then i created the homepage that will be empty in the beginning and i implemented two buttons in the appbar
+for the "Add" and "Edit" . Also implemeted the model class pets to use it later.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+The task i started with was the "Add pet" .
+on clicking on the Add button "+" takes you to the add page which have a form containing the attributes of the pet.
+On clicking on the add button the data will be collected from the form to be used in a post request using the pet Api to send it to the server.
+If the add is successful a snackbar widget will show.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The second task was "Edit pet" . I looked into the Edit Api that was provided and it was the exactly the same as the "Add" Api .
+so i was left with no choice but to implement the same thing for the Edit page.
+
+For the listing page i divide the list into three Tabs using the status of the pets(available, pending,sold).
+To achieve that i implemented 3 taps each one containig a list related to their respective status.
+After this i started implenting pet card that containg the information of the pets to be displayed into a simple design.
+For the displaying the pets i used a GridView widget to build a list of pet cards.
+I used the "get request Api" to get the information on the pet as a list  and i added them to the parameters of the pet card using snapshot.
+
+The picture in the api were all dummy data so i used a fixed picture.
+
+For the code i organise it this way : 
+For every page i create a directory which contains the pages components.
+And if the components contains other components i create a folder for them also.
